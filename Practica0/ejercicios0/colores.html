@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<html lang = "es">
+	<head>
+		<title>colores</title>
+		<link id="estilo" href="default.css" rel="stylesheet" type="text/css" /> <!--Aqu� incluimos la hoja de estilos para la p�gina-->
+		<script>
+			function cambiarCSS(nuevo){
+				document.getElementById('estilo').setAttribute('href', nuevo);
+			}
+		</script>
+	</head>
+	<body>
+		<h1>Página sencilla para decorar con estilos</h1>
+		<p>este es el primer párrafo, que no tiene nada de especial.</p>
+		<h2>Esto es un título de segundo nivel</h2>
+		<p>Que tiene dentro un párrafo con <em>un fragmento enfatizado</em></em></p>
+		<h3>Esto es un título de tercer nivel</h3>
+		<p>El tercer párrafo tampoco tiene nada de especial</p>
+		<button type="button" onclick="cambiarCSS('verde.css')">verde</button>
+		<button type="button" onclick="cambiarCSS('marronygrande.css')">marron y grande</button>
+		<button type="button" onclick="cambiarCSS('consola.css')">consola</button>
+	</body>
+</html>

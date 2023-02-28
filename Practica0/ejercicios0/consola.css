@@ -1,0 +1,10 @@
+body {
+	background-color: #000000;
+	color: #00cc00;
+    font-family: monospace;
+    font-size: 18px;
+}
+
+em {
+	font-weight: bold; /* Ponemos en �nfasis en negrita */
+}
