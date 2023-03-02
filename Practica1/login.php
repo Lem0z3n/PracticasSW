@@ -11,18 +11,21 @@
     <div id = "contenedor">
         <?php include 'cabecera.php' ?>
 
-        <?php include 'sidebarIzq.php' ?>
+        <?php include 'sidebarIzq.php' ;
+                    $username = "";
+                    $password = "";
+        ?>
 
 
         <main id="contenido">
             <form method="POST" action="procesarLogin.php">
                 <div>
-                    <label for="username">Usuario: </label>
-                    <input type="text" id="username" name="username" value="<?= $username ?>" />
+                    <p>Usuario: </p>
+                    <input type="text" id = "username" name="username" value= "<?= $username ?>" />
                 </div>
                 <div>
-                    <label for="password">Contraseña: </label>
-                    <input type="password" id="password" name="password" value="<?= $password ?>" />
+                    <p>Contraseña: </p>
+                    <input type="password" name="password" value= "<?= $password ?>" />
                 </div>
                 <div>
                     <button type="submit">Enviar</button>

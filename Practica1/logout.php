@@ -16,17 +16,16 @@
 
 	<main>
         <?php 
-            unset($_SESSION["login"]);
+            $_SESSION["login"] = false;
             unset($_SESSION["username"]);
             unset($_SESSION["password"]);
-            if(!isset($_SESSION["esAdmin"])) 
-                unset($_SESSION["esAdmin"]);
+            if(isset($_SESSION["esAdmin"])) 
+               unset($_SESSION["esAdmin"]);
         ?>
 		<article>
 			<h1>Gracias por venir!</h1>
 		</article>
 	</main>
-
 	
 	<?php include 'sidebarDer.php' ?>
 

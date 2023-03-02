@@ -15,7 +15,7 @@
 	<?php include 'sidebarIzq.php' ?>
 
 	<?php
-        (isset($_SESSION["login"])) ? include 'contenidoUsuario.php' : include 'contenidoError.php';
+        ($_SESSION["login"]) ? include 'contenidoUsuario.php' : include 'contenidoError.php';
     ?>
 
 	

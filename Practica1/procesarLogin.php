@@ -1,17 +1,4 @@
-<?php  
-            $username = htmlspecialchars(trim(strip_tags($_REQUEST["username"])));
-            $password = htmlspecialchars(trim(strip_tags($_REQUEST["password"])));
-            
-            if ($username == "pepe" && $password == "123456") {
-                $_SESSION["login"] = true;
-                $_SESSION["nombre"] = "Usuario";
-            }
-            else if ($username == "admin" && $password == "adminpass") {
-                $_SESSION["login"] = true;
-                $_SESSION["nombre"] = "Administrador";
-                $_SESSION["esAdmin"] = true;
-            }
-?>
+
 
 <!DOCTYPE html>
 <html>
@@ -27,11 +14,26 @@
 
         <?php include 'cabecera.php' ?>
 
+        <?php  
+            $username = htmlspecialchars(trim(strip_tags($_REQUEST["username"])));
+            $password = htmlspecialchars(trim(strip_tags($_REQUEST["password"])));
+            
+            if ((strcmp($username,"pepe") == 0) && (strcmp("123456",$password) == 0)) {
+                $_SESSION["login"] = true;
+                $_SESSION["nombre"] = "Usuario";
+            }
+            else if ($username == "admin" && $password == "adminpass") {
+                $_SESSION["login"] = true;
+                $_SESSION["nombre"] = "Administrador";
+                $_SESSION["esAdmin"] = true;
+            }
+?>
+
         <?php include 'sidebarIzq.php' ?>
 
         <main id ="contenido">
 
-            <?php if (!isset($_SESSION["login"])) { //Usuario incorrecto
+            <?php if (!$_SESSION["login"]) { //Usuario incorrecto
                         echo "<h1>ERROR</h1>";
                         echo "<p>El usuario o contraseña no son válidos.</p>";
                     }

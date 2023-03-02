@@ -5,8 +5,8 @@ require_once 'config.php';
 		<h1>Mi gran página web</h1>
 		<div class="saludo">
 		<?php 
-            if(isset($_SESSION['username'])) {
-             echo "<span>Bienvenido: {$_SESSION['username']} </span>";
+            if($_SESSION["login"]) {
+             echo "<span>Bienvenido: {$_SESSION['nombre']} </span>";
              echo "<a href = 'logout.php'> Cerrar Sesión</a>";
             }else{
              echo "<span>Usuario desconocido. </span>" ;

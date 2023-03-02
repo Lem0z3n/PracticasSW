@@ -16,12 +16,12 @@
 
 	<main id = "contenido">
         <?php
-             if (!isset($_SESSION["esAdmin"])) { //Usuario incorrecto
+             if (!isset($_SESSION["esAdmin"])) { //Usuario noadmin
                 echo "<h1>Tu no puedes mirar esto forastero</h1>";
                 echo "<p>Este es contenido esclusivo para administradores</p>";
                 echo '<img src="madGandalf.gif">';
             }
-            else { //Usuario registrado
+            else { //Usuario admin
                 echo "<h1>Consola de administracion</h1>";
                 echo "<p>esto es un mensaje de administracion, hola :D</p>";
                 echo '<img src="happyGandalf.gif">';
