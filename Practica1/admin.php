@@ -14,7 +14,7 @@
 
 	<?php include 'sidebarIzq.php' ?>
 
-	<main>
+	<main id = "contenido">
         <?php
              if (!isset($_SESSION["esAdmin"])) { //Usuario incorrecto
                 echo "<h1>Tu no puedes mirar esto forastero</h1>";
